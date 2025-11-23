@@ -31,7 +31,13 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ]  **Test-Driven Development (TDD):** Plan includes TDD approach for new features/bug fixes.
+- [ ]  **Modern Python & Type Hinting:** Python 3.12+ and comprehensive type hints are planned.
+- [ ]  **Code Readability & Maintainability:** Adherence to style guides (PEP 8), minimization of complexity is considered.
+- [ ]  **Architectural Decision Records (ADRs):** Significant architectural decisions are identified for ADR documentation.
+- [ ]  **OOP Principles:** SOLID, DRY, KISS principles are considered in the design.
+- [ ]  **Technical Stack Alignment:** Planned technical choices (Python 3.12+, UV, pytest, Git) align with the constitution.
+- [ ]  **Quality Requirements Integration:** Plans account for target test coverage (80%), 100% test pass rate, and `dataclasses` for data structures.
 
 ## Project Structure
 
