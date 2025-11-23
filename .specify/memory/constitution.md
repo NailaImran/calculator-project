@@ -1,55 +1,72 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: None (initial fill) → 1.0.0
+- List of modified principles:
+  - Test-Driven Development (TDD) (Added)
+  - Modern Python & Type Hinting (Added)
+  - Code Readability & Maintainability (Added)
+  - Architectural Decision Records (ADRs) (Added)
+  - OOP Principles: SOLID, DRY, KISS (Added)
+- Added sections:
+  - Technical Stack
+  - Quality Requirements
+- Removed sections: None
+- Templates requiring updates:
+  - .specify/templates/plan-template.md (✅ updated)
+  - .specify/templates/spec-template.md (✅ updated)
+  - .specify/templates/tasks-template.md (✅ updated)
+  - .gemini/commands/sp.adr.toml (✅ updated)
+  - .gemini/commands/sp.analyze.toml (✅ updated)
+  - .gemini/commands/sp.checklist.toml (✅ updated)
+  - .gemini/commands/sp.clarify.toml (✅ updated)
+  - .gemini/commands/sp.constitution.toml (✅ updated)
+  - .gemini/commands/sp.git.commit_pr.toml (✅ updated)
+  - .gemini/commands/sp.implement.toml (✅ updated)
+  - .gemini/commands/sp.phr.toml (✅ updated)
+  - .gemini/commands/sp.plan.toml (✅ updated)
+  - .gemini/commands/sp.specify.toml (✅ updated)
+  - .gemini/commands/sp.tasks.toml (✅ updated)
+  - README.md (⚠ not found)
+- Follow-up TODOs: None
+-->
+# Calculator Project Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Test-Driven Development (TDD)
+All new features and bug fixes MUST be developed using a Test-Driven Development (TDD) approach. Tests MUST be written before implementation, pass when the implementation is complete, and strictly follow the Red-Green-Refactor cycle.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Modern Python & Type Hinting
+All Python code MUST use Python 3.12 or newer. Type hints MUST be used comprehensively across the entire codebase to improve readability, maintainability, and error detection.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Code Readability & Maintainability
+Code MUST be clean, easy to read, and follow established Python style guides (e.g., PEP 8). Complexity MUST be minimized, and code SHOULD be refactored regularly to ensure high maintainability.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Architectural Decision Records (ADRs)
+Significant architectural decisions MUST be documented using Architectural Decision Records (ADRs). ADRs provide context, alternatives considered, and rationale for decisions, ensuring long-term project understanding.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. OOP Principles: SOLID, DRY, KISS
+Object-Oriented Programming (OOP) principles including SOLID (Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion), DRY (Don't Repeat Yourself), and KISS (Keep It Simple, Stupid) MUST be applied consistently throughout the codebase.
 
-### [PRINCIPLE_6_NAME]
+## Technical Stack
 
+- Python 3.12+: Primary language for all development.
+- UV package manager: Used for dependency management and project environments.
+- pytest: The designated framework for all unit and integration testing.
+- Git: All project files MUST be managed under version control using Git.
 
-[PRINCIPLE__DESCRIPTION]
+## Quality Requirements
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- Test Coverage: All implemented features MUST have comprehensive test coverage, with a minimum target of 80% line coverage.
+- Test Pass Rate: All tests MUST pass before any code can be merged into the main branch.
+- Data Structures: Python `dataclasses` MUST be used for defining data structures to ensure clarity, immutability where appropriate, and type safety.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution defines the fundamental principles and standards for the Calculator Project.
+- All Pull Requests (PRs) and code reviews MUST verify compliance with these principles.
+- Any amendments to this constitution MUST be documented, approved by core contributors, and include a clear migration plan if changes are backward-incompatible.
+- The versioning policy for this constitution follows Semantic Versioning (MAJOR.MINOR.PATCH).
+- For day-to-day development guidance, refer to project-specific documentation (e.g., README.md).
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-11-23 | **Last Amended**: 2025-11-23
